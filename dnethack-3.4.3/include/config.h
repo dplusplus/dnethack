@@ -143,10 +143,10 @@
 
 #ifndef WIZARD		/* allow for compile-time or Makefile changes */
 # ifndef KR1ED
-#  define WIZARD  "wizard" /* the person allowed to use the -D option */
+#define WIZARD "dplusplus"
 # else
 #  define WIZARD
-#  define WIZARD_NAME "wizard"
+#define WIZARD_NAME "dplusplus"
 # endif
 #endif
 
@@ -169,7 +169,7 @@
 
 #ifdef UNIX
 /* path and file name extension for compression program */
-#define COMPRESS "/usr/bin/compress"	/* Lempel-Ziv compression */
+#define COMPRESS "/bin/gzip"
 #define COMPRESS_EXTENSION ".Z"		/* compress's extension */
 /* An example of one alternative you might want to use: */
 /* #define COMPRESS "/usr/local/bin/gzip" */	/* FSF gzip compression */
@@ -185,7 +185,7 @@
  *	a tar-like file, thus making a neater installation.  See *conf.h
  *	for detailed configuration.
  */
-/* #define DLB */	/* not supported on all platforms */
+#define DLB
 
 /*
  *	Defining INSURANCE slows down level changes, but allows games that
