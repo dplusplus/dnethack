@@ -1,0 +1,30 @@
+* How to build and install (on Ubuntu 12.10)
+1. install required library (if needed)
+
+  # apt-get install patch flex bison libncurses-dev
+
+2. generate Makefiles
+
+  $ sh sys/unix/setup.sh
+
+2-1. edit wizard name (if needed)
+
+  $ sed -i "s/\"wizard\"/\"`whoami`\"/g" include/config.h
+
+  you can play wizard mode following as follows:
+
+  $ dnethack -u (your login name) -D
+
+3. build
+
+  $ make -fMakefile
+
+4. install
+
+  # make -fMakefile install
+
+5. play
+
+  $ dnethack
+
+good luck!
